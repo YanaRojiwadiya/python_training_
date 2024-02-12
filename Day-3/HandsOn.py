@@ -61,7 +61,11 @@ print(stock)
 stock_sort = sorted(stock.keys())
 for i in stock_sort:
     print(i + ":",stock[i])
-
+#sorting dictionary itself
+sorted_stock = {}
+for item in sorted(stock):
+    sorted_stock[item] = stock[item]
+print(sorted_stock)
 
 """List Comprehensions:
 Write a Python program that generates a list of squares of even numbers between 1 and 20 using list comprehension."""
@@ -79,6 +83,17 @@ along with its population."""
 population = {"surat":8065000,"ahmedabad":8651000,"delhi":32941000,"mumbai":21297000,"bangalore":13608000}
 highest = max(population, key=population.get)
 print(highest + ":",population[highest])
+
+#using iterate method
+highest_population = 0
+highest_city = ""
+
+for city in population:
+    if population[city] > highest_population:
+        highest_population = population[city]
+        highest_city = city
+print(highest_city + ":", highest_population)
+
 
 
 """Tuple Unpacking:
@@ -142,14 +157,38 @@ print(list_2)
 #1. Find the intersection of the two lists (common elements).
 intersection = list(set(list_1)&set(list_2))
 print(intersection)
+#another method
+intersection = []
+for x in list_1:
+    if x in list_2:
+        intersection.append(x)
+print(intersection)
+
 
 #2. Find the union of the two lists (all elements without duplicates).
 union = list(set(list_1)|set(list_2))
 print(union)
+#another method
+union = []
+for x in list_1:
+    if x not in union:
+        union.append(x)
+for x in list_2:
+    if x not in union:
+        union.append(x)
+print(union)
+
 
 #3. Find the elements present in the first list but not in the second list.
 uniqe_elements_list1 = list(set(list_1)-set(list_2))
 print(uniqe_elements_list1)
+#another method
+uniqe_elements_list1 = []
+for x in list_1:
+    if x not in list_2:
+        uniqe_elements_list1.append(x)
+print(uniqe_elements_list1)
+
 
 
 """Dictionary Sorting:
