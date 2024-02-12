@@ -2,6 +2,12 @@
 Input 5 → 101, 7 → 111"""
 
 def integer_to_binary(number):
-    return bin(number)[2:]
-number = int(input("enter int value:"))
-print(integer_to_binary(number),"is a binary value of ", number)
+    binary = ""  
+    while number > 0:
+        binary = str(number % 2) + binary
+        number //= 2
+    return binary
+
+number = int(input("Enter integer value: "))
+binary_value = integer_to_binary(number)
+print(binary_value, "is a binary value of", number)
