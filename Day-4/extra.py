@@ -119,47 +119,16 @@ Maximum of all even numbers = 100
 Minimum of all odd numbers = 1
 ans = 100 - 1 = 99"""
 
-#example 1:
-
-A = [0, 2, 9]
-
-A.sort()
-print(A)
-
-for i in A[:-1]:
+A = [5, 17, 100, 1]
+even = []
+odd = []
+for i in A:
     if i%2==0:
-        even = i
-    else:
-        i-1
-        
-for i in A[0:]:
+        even.append(i)
     if i%2!=0:
-        odd = i
-    else:
-        i+1
+        odd.append(i)
 
-diff = even - odd
-print(diff)
-
-#example 2:
-
-B = [5, 17, 100, 1]
-B.sort()
-print(B)
-
-for i in B[:-1]:
-    if i%2==0:
-        even = i
-    else:
-        i-1
-
-for i in B[0:]:
-    if i%2!=0:
-        odd = i
-    else:
-        i+1
-
-diff = even - odd
+diff = max(even) - min(odd)
 print(diff)
 
 
@@ -216,7 +185,6 @@ Explanation 2:
 
 1 occurs once."""
 
-#example 1:
 A = [1, 2, 2, 3, 1]
 
 num = 0
@@ -224,14 +192,6 @@ for i in A:
     num = num^i
 print(num)
     
-#example 2:
-A = [1, 2, 2]
-
-num = 0
-for i in A:
-    num = num^i
-print(num)
-
 
 
 
@@ -268,14 +228,13 @@ Example Explanation
 We can change the array A = [4, 4, 4, 4, 4]. The time required will be 8 seconds."""
 
 A = [2, 4, 1, 3, 2]
-A.sort()
-count = 1
+maximun = max(A)
+count = 0
 for i in A:
-    if i != A[-1]:
-        i += 1
-    else:
-        count += 1
+    count += maximun - i
 print("The time required will be ",count," seconds")
+
+
 
 
 
