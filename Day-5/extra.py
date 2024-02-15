@@ -58,11 +58,14 @@ Explanation 2:
 A = [1, 3, 4, 2, 5]
 A.sort()
 print(A)
+B = ()
 for i in range(len(A)-1):
     if A[i]+1==A[i+1]:
-        print(1)
+        B = 1
     else:
-        print(0)
+        B = 0
+        break
+print(B)
 
 
 
