@@ -168,8 +168,14 @@ Explanation 2:
  This number is not a COLORFUL number since the product sequence 23 and sequence 6 is same"""
 
 
-A = 234
+n = 234
 
+num = []
+while n > 0:
+    a = n % 10
+    n //= 10
+    num.append(a)
+print(num)
 
 
 
