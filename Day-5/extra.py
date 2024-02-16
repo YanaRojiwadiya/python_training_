@@ -168,7 +168,7 @@ Explanation 2:
  This number is not a COLORFUL number since the product sequence 23 and sequence 6 is same"""
 
 
-n = 234
+n = 2500
 
 num = []
 while n > 0:
