@@ -19,6 +19,16 @@ def factorial(n):
 a = factorial(7)
 print(a)
 
+#by using recursion:
+def fact(n):
+    if(n==0 or n==1):
+        return 1
+    else:
+        return n*fact(n-1)
+
+b = fact(7)
+print(b)
+
 """3. Write a program that defines a function to calculate the sum of a list of numbers. The function should take a list of numbers as input and return the
 sum of those numbers."""
 
@@ -48,6 +58,18 @@ num = 5
 a = fibonacci_number(num)
 print(a)
 
+#by using recursion
+def fibonaci(n):
+    if(n==1):
+        return 1
+    elif(n==2):
+        return 2
+    else:
+        return fibonaci(n-1)+fibonaci(n-2)
+
+n = 5
+a = fibonaci(n)
+print(a)
 
 """5. Create a module called my_module that defines a function to calculate the square of a number. Import the module into a new program and use the function
 to calculate the square of a number."""
